@@ -1,7 +1,7 @@
 # CRCore
 A core utilities library for Apple platforms.
 
-## Supported Platforms:
+## Supported Platforms
   * iOS v12.0+
   * macOS v10.13+
   * watchOS v4.0+
