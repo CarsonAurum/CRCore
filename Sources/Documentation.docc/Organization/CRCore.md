@@ -6,6 +6,9 @@ software packages for Apple platforms.
 
 ## Topics
 
+### Useful Type Extensions
+- ``Swift/Bool``
+
 ### Foundation Timers
 - <doc:Timers>
 - ``Foundation/Timer``

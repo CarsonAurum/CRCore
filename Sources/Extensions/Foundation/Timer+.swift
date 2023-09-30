@@ -6,6 +6,12 @@ import Foundation
 
 // MARK: - Instance Funcs
 extension Timer {
+    
+    /// Schedule this timer on a run loop.
+    ///
+    /// - Parameters:
+    ///   - loop: The run loop to execute this timer. If none is provided, `.current` is used.
+    ///   - modes: Any optional run loop modes to apply. If none are given, `.default` is used.
     @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public func start(loop: RunLoop = .current, modes: RunLoop.Mode...) {
         let modes = modes.isEmpty ? [.default] : modes
@@ -15,6 +21,13 @@ extension Timer {
 
 // MARK: - Static Funcs
 extension Timer {
+    
+    /// Create and schedule a timer that executes the given closure once the specified interval has passed.
+    ///
+    /// - Parameters:
+    ///   - interval: The waiting interval before execution of the closure.
+    ///   - block: The closure to execute.
+    /// - Returns: The timer instance, after creation and scheduling.
     @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     @discardableResult
     @inlinable
@@ -23,6 +36,13 @@ extension Timer {
         timer.start()
         return timer
     }
+    
+    /// Create and schedule a timer that executes the given closure repeatedly in the specified interval.
+    ///
+    /// - Parameters:
+    ///   - interval: The delay interval between each execution of the clusre.
+    ///   - block: The closure to execute.
+    /// - Returns: The timer instance, after creation and scheduling.
     @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     @discardableResult
     @inlinable
@@ -31,6 +51,16 @@ extension Timer {
         timer.start()
         return timer
     }
+    
+    /// Create and schedule a timer that executes the given closure repeatedly in the specified interval.
+    /// 
+    /// - Note: The closure for this function receives the timer as a parameter. This enables timer cancellation. Please read the
+    ///  <doc:Timers> article for more information.
+    ///
+    /// - Parameters:
+    ///   - interval: The delay interval between each execution of the closure.
+    ///   - block: The closure to execute.
+    /// - Returns: The timer instance, after creation and scheduling.
     @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     @discardableResult
     @inlinable
@@ -40,6 +70,15 @@ extension Timer {
         timer.start()
         return timer
     }
+    
+    /// Create a timer that executes the given closure once the specified interval has passed.
+    ///
+    /// - Note: This timer must be scheduled via ``start(loop:modes:)`` to execute.
+    ///
+    /// - Parameters:
+    ///   - interval: The waiting interval before execution of the closure.
+    ///   - block: The closure to execute.
+    /// - Returns: The timer instance, after creation.
     @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     @inlinable
     public static func new(after interval: TimeInterval, _ block: @escaping () -> Void) -> Timer {
@@ -51,6 +90,15 @@ extension Timer {
             0
         ) { _ in block() }
     }
+    
+    /// Create a timer that executes the given closure repeatedly in the specified interval.
+    ///
+    /// - Note: This timer must be scheduled via ``start(loop:modes:)`` to execute.
+    ///
+    /// - Parameters:
+    ///   - interval: The delay interval between each execution of the clusre.
+    ///   - block: The closure to execute.
+    /// - Returns: The timer instance, after creation.
     @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     @inlinable
     public static func new(every interval: TimeInterval, _ block: @escaping () -> Void) -> Timer {
@@ -62,6 +110,17 @@ extension Timer {
             0
         ) { _ in block() }
     }
+    
+    /// Create a timer that executes the given closure repeatedly in the specified interval.
+    ///
+    /// - Note: This timer must be scheduled via ``start(loop:modes:)`` to execute.
+    /// - Note: The closure for this function receives the timer as a parameter. This enables timer cancellation. Please read the
+    ///  <doc:Timers> article for more information.
+    ///
+    /// - Parameters:
+    ///   - interval: The delay interval between each execution of the closure.
+    ///   - block: The closure to execute.
+    /// - Returns: The timer instance, after creation.
     @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     @inlinable
     @nonobjc
