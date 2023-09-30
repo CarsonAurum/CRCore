@@ -19,3 +19,6 @@ software packages for Apple platforms.
 - ``assert(_:)-2w2ak``
 - ``assert(_:)-7c38u``
 - ``assert(_:)-680pu``
+
+### Contributing
+- <doc:CodeStyle>
