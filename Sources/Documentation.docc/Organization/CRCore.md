@@ -8,6 +8,12 @@ software packages for Apple platforms.
 
 ### Useful Type Extensions
 - ``Swift/Bool``
+- ``Swift/Optional``
+
+### Numerics
+- ``Swift/BinaryInteger``
+- ``Swift/BinaryFloatingPoint``
+- ``Swift/Double``
 
 ### Foundation Timers
 - <doc:Timers>

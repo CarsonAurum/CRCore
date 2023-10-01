@@ -1,5 +1,7 @@
 # ``Swift/Double``
 
+Extensions specific to use cases involving the standard `Double` type.
+
 ## Topics
 
 ### Time Conversions

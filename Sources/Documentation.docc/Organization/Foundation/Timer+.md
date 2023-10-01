@@ -1,5 +1,7 @@
 # ``Foundation/Timer``
 
+Extensions facilitating the creation and use of Foundation `Timer`s.
+
 ## Topics
 
 ### Delay Timers

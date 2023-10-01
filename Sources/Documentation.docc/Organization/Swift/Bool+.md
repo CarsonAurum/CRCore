@@ -7,7 +7,7 @@
 - ``Swift/Bool/int``
 - ``Swift/Bool/string``
 
-### True Conditional Closures
+### True Deferred Closures
 
 - ``Swift/Bool/then(_:)-25mng``
 - ``Swift/Bool/then(_:)-mwxh``
@@ -18,7 +18,7 @@
 - ``Swift/Bool/then(_:)-9mrua``
 - ``Swift/Bool/then(_:)-30ps``
 
-### False Conditional Closures
+### False Deferred Closures
 
 - ``Swift/Bool/or(_:)-2tke4``
 - ``Swift/Bool/or(_:)-11avo``
