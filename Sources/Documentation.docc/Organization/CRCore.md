@@ -10,13 +10,17 @@ software packages for Apple platforms.
 - ``Swift/Bool``
 - ``Swift/Optional``
 
-### Numerics
+### Numeric Extensions
 - ``Swift/BinaryInteger``
 - ``Swift/BinaryFloatingPoint``
 - ``Swift/Double``
 
-### Text
+### Text Extensions
 - ``Swift/Character``
+
+### Standard Library Extensions
+- ``Swift/Comparable``
+- ``Swift/Strideable``
 
 ### Foundation Timers
 - <doc:Timers>
