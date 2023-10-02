@@ -3,6 +3,12 @@
 //
 
 import Foundation
+import Darwin
+
+extension BinaryFloatingPoint {
+    @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
+    public var isInteger: Bool { Darwin.floor(self) == self }
+}
 
 extension BinaryFloatingPoint {
     

@@ -6,26 +6,50 @@ software packages for Apple platforms.
 
 ## Topics
 
-### Useful Type Extensions
+### Conditional Extensions
 - ``Swift/Bool``
 - ``Swift/Optional``
 
-### Numeric Extensions
+### Working with Numbers
 - ``Swift/BinaryInteger``
 - ``Swift/BinaryFloatingPoint``
 - ``Swift/Double``
 
-### Text Extensions
+### Working with Text
 - ``Swift/Character``
+- ``Swift/String``
 
-### Standard Library Extensions
+### Working with Composites
+- ``Swift/Set``
+- ``Swift/Dictionary``
+- ``Swift/Array``
+
+### Mutating Composites
+- ``ExtendableSequence``
+- ``ExtendableCollection``
+- ``ExtendableRangeReplaceableCollection``
+
+### Other STL Extensions
 - ``Swift/Comparable``
 - ``Swift/Strideable``
+
+### Working with Pointers
+- ``Swift/UnsafePointer``
 
 ### Foundation Timers
 - <doc:Timers>
 - ``Foundation/Timer``
 - ``Swift/Double``
+
+### Functional Programming
+- ``|>(_:_:)-7w7om``
+- ``with(_:_:)``
+- ``|>(_:_:)-45plb``
+- ``update(_:_:)-4hxm4``
+- ``|>(_:_:)-8fvcb``
+- ``update(_:_:)-9ldru``
+- ``|>(_:_:)-5si7o``
+- ``updateObject(_:_:)``
 
 ### Debugging
 - ``assert(_:)-g40n``

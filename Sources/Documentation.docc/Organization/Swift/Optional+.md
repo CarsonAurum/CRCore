@@ -1,4 +1,5 @@
 # ``Swift/Optional``
+Optional-based conditional extensions.
 
 ## Topics
 

@@ -1,4 +1,5 @@
 # ``Swift/Bool``
+Boolean-based conditional extensions.
 
 ## Topics
 

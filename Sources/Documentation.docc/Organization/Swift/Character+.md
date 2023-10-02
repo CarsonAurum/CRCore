@@ -1,4 +1,5 @@
 # ``Swift/Character``
+Individual character extensions.
 
 ## Topics
 
