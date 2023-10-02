@@ -3,6 +3,7 @@
 //
 
 extension BinaryInteger {
+    
     /// The raw bytes of the integer.
     @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public var bytes: [UInt8] {
@@ -15,12 +16,17 @@ extension BinaryInteger {
         }
         return result.reversed()
     }
+    
     /// Determine if this number is even.
     @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
+    @inlinable
     public var isEven: Bool { (self % 2) == 0 }
+    
     /// Determine if this number is odd.
     @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
+    @inlinable
     public var isOdd: Bool { (self % 2) != 0 }
+    
     /// String formatted for values over ±1000 (example: 1k, -2k, 100k, 1kk, -5kk..).
     @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public var kFormatted: String {
@@ -33,6 +39,7 @@ extension BinaryInteger {
         }
         return "\(self / 100_000)kk"
     }
+    
     /// String of format (XXh XXm) from seconds Int.
     @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public var timeString: String {
@@ -47,6 +54,7 @@ extension BinaryInteger {
 }
 
 extension BinaryInteger {
+    
     /// Creates a `BinaryInteger` from a raw byte representation.
     ///
     /// - Parameter bytes: An array of bytes representing the value of the integer.
@@ -67,6 +75,7 @@ extension BinaryInteger {
 }
 
 extension BinaryInteger {
+    
     /// Clamp `self` between the given numbers.
     /// - Parameters:
     ///    - lower: The lower bound.
@@ -84,6 +93,7 @@ extension BinaryInteger {
             return self
         }
     }
+    
     /// Greatest common divisor of integer value and n.
     ///
     /// - Parameter number: integer value to find gcd with.
@@ -93,6 +103,7 @@ extension BinaryInteger {
         return number == 0 ?
                self : number.gcd(of: self % number)
     }
+    
     /// Least common multiple of integer and n.
     ///
     /// - Parameter number: integer value to find lcm with.
