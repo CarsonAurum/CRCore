@@ -4,6 +4,7 @@
 
 extension BinaryInteger {
     /// The raw bytes of the integer.
+    @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public var bytes: [UInt8] {
         var result = [UInt8]()
         result.reserveCapacity(MemoryLayout<Self>.size)
@@ -15,10 +16,13 @@ extension BinaryInteger {
         return result.reversed()
     }
     /// Determine if this number is even.
+    @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public var isEven: Bool { (self % 2) == 0 }
     /// Determine if this number is odd.
+    @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public var isOdd: Bool { (self % 2) != 0 }
     /// String formatted for values over ±1000 (example: 1k, -2k, 100k, 1kk, -5kk..).
+    @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public var kFormatted: String {
         if self == 0 {
             return "0k"
@@ -30,6 +34,7 @@ extension BinaryInteger {
         return "\(self / 100_000)kk"
     }
     /// String of format (XXh XXm) from seconds Int.
+    @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public var timeString: String {
         guard self > 0 else { return "0 sec" }
         if self < 60 { return "\(self) sec" }
@@ -46,6 +51,7 @@ extension BinaryInteger {
     ///
     /// - Parameter bytes: An array of bytes representing the value of the integer.
     /// - Precondition: `bytes.count <= MemoryLayout<Self>.size`
+    @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public init?(bytes: [UInt8]) {
         precondition(bytes.count <= MemoryLayout<Self>.size,
                      "Integer with a \(bytes.count) byte binary representation of " +
@@ -68,6 +74,7 @@ extension BinaryInteger {
     /// - Returns: `self` if in range, `lower` if `self` is less than lower, and `upper` if `self` is greater
     ///   than `upper`.
     /// - SeeAlso: Floating point values share a similar ``Swift/BinaryFloatingPoint/clamp(lower:upper:)`` extension.
+    @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public func clamp(lower: Self, upper: Self) -> Self {
         if self < lower {
             return lower
@@ -81,6 +88,7 @@ extension BinaryInteger {
     ///
     /// - Parameter number: integer value to find gcd with.
     /// - Returns: greatest common divisor of self and n.
+    @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public func gcd(of number: Self) -> Self {
         return number == 0 ?
                self : number.gcd(of: self % number)
@@ -89,6 +97,7 @@ extension BinaryInteger {
     ///
     /// - Parameter number: integer value to find lcm with.
     /// - Returns: least common multiple of self and n.
+    @available(iOS 12.0.0, macOS 10.13.0, watchOS 4.0, tvOS 12.0, xrOS 1.0, *)
     public func lcm(of number: Self) -> Self {
         return (self * number) / gcd(of: number)
     }

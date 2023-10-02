@@ -15,6 +15,9 @@ software packages for Apple platforms.
 - ``Swift/BinaryFloatingPoint``
 - ``Swift/Double``
 
+### Text
+- ``Swift/Character``
+
 ### Foundation Timers
 - <doc:Timers>
 - ``Foundation/Timer``
