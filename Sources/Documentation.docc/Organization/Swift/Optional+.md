@@ -3,7 +3,6 @@
 ## Topics
 
 ### Deferred Conditional Initializers
-
 - ``Swift/Optional/init(_:if:)-341j0``
 - ``Swift/Optional/init(_:if:)-2p0d8``
 - ``Swift/Optional/init(_:if:)-g5h5``

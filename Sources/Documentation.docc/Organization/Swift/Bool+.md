@@ -3,12 +3,10 @@
 ## Topics
 
 ### Simple Type Conversions
-
 - ``Swift/Bool/int``
 - ``Swift/Bool/string``
 
 ### True Deferred Closures
-
 - ``Swift/Bool/then(_:)-25mng``
 - ``Swift/Bool/then(_:)-mwxh``
 - ``Swift/Bool/then(_:)-9o13d``
@@ -19,7 +17,6 @@
 - ``Swift/Bool/then(_:)-30ps``
 
 ### False Deferred Closures
-
 - ``Swift/Bool/or(_:)-2tke4``
 - ``Swift/Bool/or(_:)-11avo``
 - ``Swift/Bool/or(_:)-3ej0i``

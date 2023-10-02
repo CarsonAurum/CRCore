@@ -5,7 +5,6 @@ Extensions specific to use cases involving the standard `Double` type.
 ## Topics
 
 ### Time Conversions
-
 - ``Swift/Double/ms``
 - ``Swift/Double/millisecond``
 - ``Swift/Double/milliseconds``
